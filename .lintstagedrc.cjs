@@ -6,4 +6,4 @@ module.exports = {
     // --skipLibCheck will skip type checking of declaration files and save time during pre-commit hook
     () => "tsc --noEmit --skipLibCheck"
   ]
-}
+};

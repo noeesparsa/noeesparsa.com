@@ -25,6 +25,7 @@
     "@typescript-eslint/eslint-plugin": "^8.28.0",
     "@typescript-eslint/parser": "^8.28.0",
     "@vitejs/plugin-react": "^4.3.4",
+    "clsx": "^2.1.1",
     "commitlint": "^19.8.0",
     "eslint": "^9.21.0",
     "eslint-config-prettier": "^10.1.1",
