@@ -16,7 +16,7 @@ module.exports = {
       headerCorrespondence: ["subject"]
     }
   }
-}
+};
 
 module.exports = {
   extends: ["@commitlint/config-conventional"],
@@ -29,10 +29,10 @@ module.exports = {
     {
       rules: {
         "scope-pattern": ({ scope }) => {
-          const isValid = /^(TASK)-\d{1,5}$/.test(scope)
-          return [isValid, 'Scope must match "TASK-xxxx" where "xxxx" is up to 5 numeric digits']
+          const isValid = /^(TASK)-\d{1,5}$/.test(scope);
+          return [isValid, 'Scope must match "TASK-xxxx" where "xxxx" is up to 5 numeric digits'];
         }
       }
     }
   ]
-}
+};
