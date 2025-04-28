@@ -1,12 +1,17 @@
+export type RedirectionButtonProps = {
+  href: string;
+};
+
 const RedirectionButton = () => {
   return (
-    <button className="relative flex items-center bg-white text-black border border-gray-300 px-4 py-2 rounded-md overflow-hidden group hover:bg-gray-100 transition-all duration-300">
-      {/* Icon */}
-      <span className="material-icons text-lg">add</span>
-
-      {/* Text */}
-      <span className="absolute left-0 ml-2">Add Item</span>
-    </button>
+    <a
+      href="https://github.com"
+      target="_blank"
+      className=" text-black hover:ring-4 hover:ring-gray-200 rounded-full p-2 text-center inline-flex items-center hover:cursor-pointer bg-white transition-all ease-in-out duration-300"
+      rel="noreferrer"
+    >
+      <i className="fa-solid fa-arrow-right -rotate-45 "></i>
+    </a>
   );
 };
 
