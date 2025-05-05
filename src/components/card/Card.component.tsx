@@ -20,7 +20,7 @@ const Card: FC<Readonly<PropsWithChildren<CardProps>>> = ({
   additionalContentClasses = ""
 }) => {
   const className = clsx(
-    "h-full flex flex-col w-full rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 ease-in-out relative bg-ivory",
+    "h-full flex flex-col w-full rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 ease-in-out relative bg-white",
     order,
     colSpan,
     rowSpan

@@ -7,10 +7,10 @@ type SkillProps = {
 
 const Skill: FC<Readonly<SkillProps>> = ({ name, logoSource }) => {
   return (
-    <li className="w-22 h-22 bg-white rounded-xl flex items-center justify-center">
+    <li className="flex items-center justify-center">
       <img
-        width={48}
-        height={48}
+        width={56}
+        height={56}
         className="object-contain max-w-none"
         src={logoSource}
         alt={name}

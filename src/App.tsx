@@ -7,7 +7,7 @@ import SkillsContent from "./components/skillsContent/SkillsContent.component";
 
 function App() {
   return (
-    <main className="h-full w-full bg-dark-green">
+    <main className="h-full w-full bg-gray-200">
       <Grid>
         {/** ABOUT **/}
         <Card order="order-1 md:order-1 lg:order-1" colSpan="col-span-2 lg:col-span-3"></Card>

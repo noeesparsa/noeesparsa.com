@@ -1,14 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-  --color-dark-green: #043f2e;
-  --color-dark-spring-green: #29702b;
-  --color-yellow-green: #78c51d;
-  --color-mindaro: #c8f169;
-  --color-ivory: #eef2e3;
-  --color-pearl: #cdd3b6;
-  --color-eerie-black: #252523;
-
   --animate-infinite-scroll: infinite-scroll 30s linear infinite;
   @keyframes infinite-scroll {
     0% {
