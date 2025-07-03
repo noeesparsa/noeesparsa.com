@@ -13,7 +13,8 @@
   },
   "dependencies": {
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-icon-cloud": "^4.1.7"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
