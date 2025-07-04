@@ -29,8 +29,13 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Run ESLint
-        run: pnpm run lint
+      - name: Setup Biome
+        uses: biomejs/setup-biome@v2
+        with:
+          version: latest
+
+      - name: Run Biome
+        run: pnpm run lint:ci
 
       - name: Build project
         run: pnpm run build
