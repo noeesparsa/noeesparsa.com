@@ -35,7 +35,7 @@ jobs:
           version: latest
 
       - name: Run Biome
-        run: pnpm run lint:ci
+        run: pnpm run biome:ci
 
       - name: Build project
         run: pnpm run build
