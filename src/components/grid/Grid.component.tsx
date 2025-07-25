@@ -1,8 +1,12 @@
 import { Responsive, WidthProvider } from "react-grid-layout";
 import "/node_modules/react-grid-layout/css/styles.css";
+import type { SizeProp } from "@fortawesome/fontawesome-svg-core";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { clsx } from "clsx";
 import { useMemo } from "react";
-import { type ScreenSize, useScreenSize } from "../../hooks/useWindowSize/useWindowSize";
+import { type ScreenSize, useScreen } from "../../hooks/useWindowSize/useWindowSize";
 import ComingSoon from "../comingSoon/ComingSoon.component";
+import SocialNetworkCard from "../socialNetworkCard/SocialNetworkCard.component";
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
@@ -34,10 +38,10 @@ const layouts = {
   sm: [
     { i: "about", x: 0, y: 0, w: 4, h: 4 },
     { i: "photo", x: 0, y: 5, w: 2, h: 2 },
-    { i: "linkedin", x: 2, y: 5, w: 1, h: 1 },
-    { i: "github", x: 3, y: 6, w: 1, h: 1 },
-    { i: "blank1", x: 3, y: 5, w: 1, h: 1 },
-    { i: "blank2", x: 2, y: 6, w: 1, h: 1 },
+    { i: "linkedin", x: 3, y: 5, w: 1, h: 1 },
+    { i: "github", x: 2, y: 6, w: 1, h: 1 },
+    { i: "blank1", x: 2, y: 5, w: 1, h: 1 },
+    { i: "blank2", x: 3, y: 6, w: 1, h: 1 },
     { i: "experiences", x: 0, y: 7, w: 4, h: 4 },
     { i: "stack", x: 0, y: 9, w: 4, h: 4 },
     { i: "project1", x: 0, y: 8, w: 2, h: 4 },
@@ -46,12 +50,8 @@ const layouts = {
     { i: "footer", x: 0, y: 11, w: 4, h: 2 }
   ]
 };
-export function Grid() {
-  const screenSize = useScreenSize();
-
-  const isMobile: boolean = useMemo(() => {
-    return ["xs", "sm"].includes(screenSize);
-  }, [screenSize]);
+const Grid = () => {
+  const { screenSize, isMobile } = useScreen();
 
   const rowHeightByScreenSize: Record<ScreenSize, number> = useMemo(() => {
     return {
@@ -60,6 +60,18 @@ export function Grid() {
       md: 172,
       lg: 300,
       "": 300
+    };
+  }, []);
+
+  const cardBorderRadius = useMemo(() => (isMobile ? "rounded-2xl" : "rounded-4xl"), [isMobile]);
+
+  const socialCardIconSize: Record<ScreenSize, SizeProp> = useMemo(() => {
+    return {
+      xs: "2x" as SizeProp,
+      sm: "2x" as SizeProp,
+      md: "3x" as SizeProp,
+      lg: "4x" as SizeProp,
+      "": "4x" as SizeProp
     };
   }, []);
 
@@ -76,34 +88,40 @@ export function Grid() {
         margin={[16, 16]}
         rowHeight={rowHeightByScreenSize[screenSize]}
       >
-        <div className="rounded-2xl bg-white p-8" key="about">
+        <div className={clsx(cardBorderRadius, "bg-white p-8")} key="about">
           <ComingSoon title="About section is coming soon..." />
         </div>
-        <div className="rounded-2xl bg-white p-8" key="photo">
+
+        <div className={clsx(cardBorderRadius, "bg-white p-8")} key="photo">
           <ComingSoon title="Photo section is coming soon..." />
         </div>
-        <div className="rounded-2xl bg-white p-8" key="linkedin">
-          <ComingSoon title={isMobile ? "..." : "Linkedin section is coming soon..."} />
+        <div className={clsx(cardBorderRadius, "bg-[#0a66c2] p-8")} key={"linkedin"}>
+          <SocialNetworkCard
+            href="https://www.linkedin.com/in/noe-esparsa/"
+            icon={faLinkedin}
+            linkText={"LinkedIn"}
+            size={socialCardIconSize[screenSize]}
+          />
         </div>
-        <div className="rounded-2xl bg-white p-8" key="github">
-          <ComingSoon title={isMobile ? "..." : "Github section is coming soon..."} />
+        <div className={clsx(cardBorderRadius, "bg-white p-8")} key="github">
+          <ComingSoon title="Github section is coming soon..." />
         </div>
-        <div className="rounded-2xl bg-white p-8" key="experiences">
+        <div className={clsx(cardBorderRadius, "bg-white p-8")} key="experiences">
           <ComingSoon title="Experiences section is coming soon..." />
         </div>
-        <div className="rounded-2xl bg-white p-8" key="stack">
+        <div className={clsx(cardBorderRadius, "bg-white p-8")} key="stack">
           <ComingSoon title="Stack section is coming soon..." />
         </div>
-        <div className="rounded-2xl bg-white p-8" key="project1">
-          <ComingSoon title="Project 1 section is cmming soon..." />
+        <div className={clsx(cardBorderRadius, "bg-white p-8")} key="project1">
+          <ComingSoon title="Project 1 section is coming soon..." />
         </div>
-        <div className="rounded-2xl bg-white p-8" key="project2">
+        <div className={clsx(cardBorderRadius, "bg-white p-8")} key="project2">
           <ComingSoon title="Project 2 section is coming soon..." />
         </div>
-        <div className="rounded-2xl bg-white p-8" key="testimonials">
+        <div className={clsx(cardBorderRadius, "bg-white p-8")} key="testimonials">
           <ComingSoon title="Testimonials section is coming soon..." />
         </div>
-        <div className="rounded-2xl bg-white p-8" key="footer">
+        <div className={clsx(cardBorderRadius, "bg-white p-8")} key="footer">
           <ComingSoon title="Footer section is coming soon..." />
         </div>
         {isMobile && <div key="blank1" />}
@@ -111,6 +129,6 @@ export function Grid() {
       </ResponsiveGridLayout>
     </div>
   );
-}
+};
 
 export default Grid;

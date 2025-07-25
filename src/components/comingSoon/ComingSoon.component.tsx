@@ -4,7 +4,7 @@ type ComingSoonProps = {
   title?: string;
 };
 
-export const ComingSoon: FC<Readonly<ComingSoonProps>> = ({ title }) => {
+const ComingSoon: FC<Readonly<ComingSoonProps>> = ({ title }) => {
   return (
     <div className="flex h-full flex-col items-center justify-center text-center">{title}</div>
   );
