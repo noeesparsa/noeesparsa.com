@@ -1,8 +1,9 @@
 import { Responsive, WidthProvider } from "react-grid-layout";
 import "/node_modules/react-grid-layout/css/styles.css";
 import type { SizeProp } from "@fortawesome/fontawesome-svg-core";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { clsx } from "clsx";
+
 import { useMemo } from "react";
 import { type ScreenSize, useScreen } from "../../hooks/useWindowSize/useWindowSize";
 import ComingSoon from "../comingSoon/ComingSoon.component";
@@ -103,8 +104,13 @@ const Grid = () => {
             size={socialCardIconSize[screenSize]}
           />
         </div>
-        <div className={clsx(cardBorderRadius, "bg-white p-8")} key="github">
-          <ComingSoon title="Github section is coming soon..." />
+        <div className={clsx(cardBorderRadius, "bg-[#24292e] p-8")} key="github">
+          <SocialNetworkCard
+            href="https://github.com/noeesparsa"
+            icon={faGithub}
+            linkText={"Github"}
+            size={socialCardIconSize[screenSize]}
+          />{" "}
         </div>
         <div className={clsx(cardBorderRadius, "bg-white p-8")} key="experiences">
           <ComingSoon title="Experiences section is coming soon..." />
