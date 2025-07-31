@@ -6,7 +6,7 @@ import Header from "./components/header/Header.component";
 
 const App: FC = () => {
   return (
-    <main className="relative flex min-h-screen flex-col content-center bg-red-100 ">
+    <main className="relative flex min-h-screen flex-col content-center bg-[#E3E7D3] ">
       <Header />
       <Grid />
     </main>

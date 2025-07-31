@@ -80,7 +80,7 @@ const Grid = () => {
     <div className="mx-auto h-full w-[320px] sm:w-[376px] md:w-[768px] xl:w-[1280px]">
       <ResponsiveGridLayout
         breakpoints={{ lg: 1279, md: 767, sm: 375 }}
-        className="layout h-full w-full bg-amber-100"
+        className="layout h-full w-full"
         cols={{ lg: 4, md: 4, sm: 4 }}
         containerPadding={[16, 16]}
         isDraggable={false}
@@ -93,8 +93,10 @@ const Grid = () => {
           <ComingSoon title="About section is coming soon..." />
         </div>
 
-        <div className={clsx(cardBorderRadius, "bg-white p-8")} key="photo">
-          <ComingSoon title="Photo section is coming soon..." />
+        <div className={clsx(cardBorderRadius, "bg-white p-4 lg:p-8")} key="photo">
+          <div className="flex h-full w-full flex-col items-center justify-center">
+            <img alt="me" src="/img.png" />
+          </div>
         </div>
         <div className={clsx(cardBorderRadius, "bg-[#0a66c2] p-8")} key={"linkedin"}>
           <SocialNetworkCard

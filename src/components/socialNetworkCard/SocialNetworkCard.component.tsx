@@ -3,7 +3,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { FC } from "react";
 import { useScreen } from "../../hooks/useWindowSize/useWindowSize";
-import AnimatedCardLinkButton from "../CardLinkButton/CardLinkButton.component";
+import AnimatedCardLinkButton from "../cardLinkButton/CardLinkButton.component";
 
 type SocialNetworkCardProps = {
   linkText: string;
