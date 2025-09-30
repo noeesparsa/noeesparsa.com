@@ -6,6 +6,7 @@ import { clsx } from "clsx";
 
 import { useMemo } from "react";
 import { type ScreenSize, useScreen } from "../../hooks/useWindowSize/useWindowSize";
+import About from "../about/About.component";
 import ComingSoon from "../comingSoon/ComingSoon.component";
 import SocialNetworkCard from "../socialNetworkCard/SocialNetworkCard.component";
 
@@ -89,8 +90,8 @@ const Grid = () => {
         margin={[16, 16]}
         rowHeight={rowHeightByScreenSize[screenSize]}
       >
-        <div className={clsx(cardBorderRadius, "bg-white p-8")} key="about">
-          <ComingSoon title="About section is coming soon..." />
+        <div className={clsx(cardBorderRadius, "overflow-hidden bg-white p-8")} key="about">
+          <About />
         </div>
 
         <div className={clsx(cardBorderRadius, "bg-white p-4 lg:p-8")} key="photo">
