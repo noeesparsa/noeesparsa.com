@@ -1,4 +1,17 @@
-{
-  "en": {},
-  "fr": {}
-}
+[
+  {
+    "key": "github",
+    "name": "GitHub",
+    "link": "https://github.com/noeesparsa"
+  },
+  {
+    "key": "linkedin",
+    "name": "LinkedIn",
+    "link": "https://www.linkedin.com/in/noe-esparsa/"
+  },
+  {
+    "key": "rootme",
+    "name": "RootMe",
+    "link": "https://www.root-me.org/RATDEALERXD?lang=fr#cfdcbae6c545c5d3638baf9da70fef78"
+  }
+]
