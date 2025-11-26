@@ -1,4 +1,20 @@
-{
-  "en": {},
-  "fr": {}
-}
+[
+  {
+    "tile": "Internal CRM tool",
+    "imageLink": "/decathlon.png",
+    "shortDescription": "",
+    "path": "decathlon-crm"
+  },
+  {
+    "tile": "Internal quality management tool",
+    "imageLink": "/decathlon.png",
+    "shortDescription": "",
+    "path": "decathlon-quality"
+  },
+  {
+    "tile": "Internal defective sample management tool",
+    "imageLink": "/decathlon.png",
+    "shortDescription": "",
+    "path": "decathlon-sample-return"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "Total Typescript",
+    "description": "Learn the basics of programming using Python.",
+    "status": "IN_PROGRESS"
+  },
+  {
+    "id": 2,
+    "title": "CNV",
+    "description": "Learn the bascics of non violent communication.",
+    "status": "COMPLETED"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Customer service tool",
+    "path": "decathlon-crm",
+    "headerSrc": "/decathlon.png",
+    "alterSource": "Decathlon logo",
+    "shortDescription": "Unified Customer Service application that centralize tools and information for agents.",
+    "stack": ["react", "nestjs", "express", "fastify", "typescript", "github_action"]
+  },
+  {
+    "id": 2,
+    "title": "Quality management tool",
+    "path": "decathlon-quality",
+    "headerSrc": "/decathlon.png",
+    "alterSource": "Decathlon logo",
+    "shortDescription": "Digital platform for managing worldwide quality actions initiated due to product defects.",
+    "stack": ["react", "angular", "typescript", "java", "github_action"]
+  },
+  {
+    "id": 3,
+    "title": "Defect sample flow tool",
+    "imageLink": "/decathlon.png",
+    "path": "decathlon-sample-return",
+    "headerSrc": "/decathlon.png",
+    "alterSource": "Decathlon logo",
+    "shortDescription": "Tool to orchestrate the process of returning and analyzing defective product samples.",
+    "stack": ["react", "typescript", "java", "github_action"]
+  }
+]
