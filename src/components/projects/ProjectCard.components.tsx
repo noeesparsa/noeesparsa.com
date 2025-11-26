@@ -23,7 +23,7 @@ const ProjectCard: FC<Readonly<ProjectCardProps>> = ({
   return (
     <Item
       asChild
-      className="!transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl bg-white group"
+      className="!transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl bg-white hover:!bg-white group"
       variant="outline"
     >
       <Link to={path}>

@@ -24,8 +24,8 @@ const router = createBrowserRouter([
 // biome-ignore lint/style/noNonNullAssertion: Default React behaviour
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <main className="flex h-screen w-screen justify-center text-stone-800">
-      <div className="z-1 flex w-full max-w-4xl flex-col gap-8 p-8 border-stone-200">
+    <main className="flex min-h-screen w-screen justify-center text-stone-800 bg-stone-50">
+      <div className="flex w-full h-full max-w-4xl flex-col gap-8 p-8">
         <RouterProvider router={router} />
       </div>
     </main>

@@ -3,11 +3,11 @@ import { Item, ItemContent, ItemDescription, ItemMedia, ItemTitle } from "../ui/
 
 const ExperienceCard = () => {
   return (
-    <Item className="p-0 bg-white" variant="default">
+    <Item className="p-0 " variant="default">
       <ItemMedia variant="image">
         <Avatar className="rounded-md size-15">
           <AvatarImage src="/decathlon_logo.png" />
-          <AvatarFallback>ER</AvatarFallback>
+          <AvatarFallback>DKT</AvatarFallback>
         </Avatar>
       </ItemMedia>
       <ItemContent>

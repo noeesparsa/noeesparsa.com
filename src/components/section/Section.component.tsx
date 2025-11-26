@@ -7,7 +7,7 @@ type SectionProps = {
 
 export const Section: FC<Readonly<PropsWithChildren<SectionProps>>> = ({ title, children }) => {
   return (
-    <section className="flex w-full flex-col gap-4 py-2">
+    <section className="flex w-full flex-col gap-4 py-2 z-10">
       <Title level={3}>{title}</Title>
       <div>{children}</div>
     </section>
